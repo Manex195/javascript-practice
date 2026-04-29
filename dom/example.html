@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Hello</h1>
+  <button>Click</button>
+  <script>
+    const btn = document.querySelector("button");
+    const title = document.querySelector("h1");
+
+    title.textContent = "New Text";
+    title.style.color = "red";
+
+    btn.addEventListener("click", () => {
+      console.log("Clicked!");
+    });
+
+    const li = document.createElement("li");
+    li.textContent = "New Item";
+    document.body.appendChild(li);
+
+    btn.addEventListener("click", () => {
+      const p = document.createElement("p");
+      p.textContent = "Hello";
+      document.body.appendChild(p);
+    });
+  </script>
+</body>
+</html>

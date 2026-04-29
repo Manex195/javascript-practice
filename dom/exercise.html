@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="btn">Click me</button>
+  <p id="text">Hello</p>
+  <script>
+    document.querySelector("#btn").addEventListener("click", () => {
+      const btn = document.querySelector("#btn");
+      btn.textContent = "Changed";
+      document.body.style.backgroundColor = "red";
+    });
+
+    const btn = document.createElement("button");
+    btn.className = "new-btn";
+    btn.textContent = "Add Element";
+    document.body.appendChild(btn);
+
+    document.querySelector(".new-btn").addEventListener("click", () => {
+      const li = document.createElement("li");
+      li.textContent = "New element";
+      document.body.appendChild(li);
+    });
+  </script>
+</body>
+</html>

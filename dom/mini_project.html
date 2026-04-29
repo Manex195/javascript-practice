@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input autocomplete="off" autofocus type="text" name="text-input" id="input-text">
+  <button type="submit" class="btn">Add Task</button>
+  <script>
+    const text_input = document.querySelector("input");
+    const btn = document.querySelector(".btn");
+
+    btn.addEventListener("click", () => {
+      const text_inp = text_input.value;
+      if (text_inp.trim() !== '') {
+        const li = document.createElement("li");
+        li.textContent = text_inp;
+        document.body.appendChild(li);
+      } else {
+        alert("Not input any text!");
+      }
+    });
+  </script>
+</body>
+</html>
